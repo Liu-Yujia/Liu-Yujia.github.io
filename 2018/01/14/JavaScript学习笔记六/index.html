@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>JavaScript学习笔记六 | 刘宇佳</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="刘宇佳，工程热物理，编程，英语" >
+    <meta name="description" content="刘宇佳的网站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="刘宇佳" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">刘宇佳</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2018/01/14/JavaScript学习笔记六/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2018/01/14/JavaScript学习笔记六/index.html" class="item ">
+                <a href="/lab/" title="测试室" class="icon-lab">&nbsp;测试室</a>
+            </li>
+            
+            <li rel="/2018/01/14/JavaScript学习笔记六/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2018/01/14/JavaScript学习笔记六/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/Liu-Yujia" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="https://weibo.com/liuyujia1991" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/yujia.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>JavaScript学习笔记六</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        刘宇佳 发表于
+        <time datetime="2018-01-14T09:33:42.000Z">2018-01-14</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<p><em>JavaScript学习笔记六</em></p>
+</blockquote>
+<a id="more"></a>
+<p>一直看我文章的朋友们应该注意到了，我最近一直没有更新关于编程学习的文章，甚至在更新的文章中也没提到关于编程的字眼。当然我并没有放弃学习编程，只不过最近遇到了瓶颈期，Eloquent JavaScript中第六章的内容看得一塌糊涂，连例题也看不懂，更别说做习题了。</p>
+<p>所以这几天一直在埋头苦学第六章的知识，甚至手抄了一遍第六章中综合了很多知识的例题，然后又敲到sandbox中编译了一遍，总算学得还有点眉目。</p>
+<p>还是从例子说起吧，这样能顺便带出来很多有用的知识，还能解析我在学习过程中遇到的很多难点。</p>
+<p>例子是这样的，给出了一个MOUNTAINS的数组对象（图1），通过计算机程序设计将该数组输出结果，使得各个元素能按各自的属性分组，并采用格式对齐的方式数组，输出效果如图2。</p>
+<p>图1 laying out a table例题</p>
+<p>图2 例题输出效果</p>
+<p>咋一看这个例题还真是愁人，正如给出的数组的名称MOUNTAINS一样，该题目像是一座撼动的大山。我看了半天解析，也没搞懂其中很多代码的意思。到后来索性就跳着看，结果越看越糊涂。</p>
+<p>看不明白的时候，只能回头在看一遍，能有什么办法？</p>
+<p>正如作者在例子中所说的，这个例题中应用了之前大量的知识，我仔细地读了一下例题中的答案代码之后，就明白了：我之前的很多概念(method, function, prototype, constructor 等等)根本没有学明白。</p>
+<p>要分类并整理出一个整齐的表格，首先要计算并识别MOUNTAIN中的元素，将相同性质的元素抽取出来，然后分类。为了实现这个小小的步骤，需要编译三个high-order函数。</p>
+<p>学过编程的童鞋应该看得出来，JavaScript的函数和别的语言的函数有明显的差别，就是函数的主体直接被写在了函数中，以至于函数本身显得很冗长很复杂，这也是JavaScript本身的一大特色，据说是可以减少错误的发生（只不过我现在功力尚浅，并没有体会到这个优点）。</p>
+<p>代码中的第一个rowHrights和第二个rowWidths是用来计算对象中元素的高度和长度的，在抽取函数的过程中，计算高度的函数并没有什么作用。第三个函数是将元素抽取并整理的重点。</p>
+<p>drawLine函数用来提取数组中的线，然后再各段线之间创造出一个空字符；drawRow将对象中相同的元素抽取出来，然后用换行符将他们聚集在一起。不过光有上面的这些函数是实现不了的，因为我在试着敲出上面的代码，然后用console.log函数检验时，系统提示有很多未定义的函数。这时候，就应该用到下面的函数了。</p>
+<p>split method是这段程序中很关键的点，将对象中不同的文本切割开，切割后的文本返回到各自的函数中。</p>
+<p>到这个时候，题中的大部分难点已经解开了，就剩下编辑一个输出函数将结果输出来。当然对这样的难题，输出函数也并不容易编写，需要用到之前没看过的method和标准函数。</p>
+<p>说实话，这段程序我现在都不能独立编出来，面前能做到看了能看懂，能找着答案敲下来并编译出来。写这篇笔记其实也很惭愧，我都没有完全能解开题目。</p>
+<p>关于这段程序的源代码，大家可以到Eloquent JavaScript的官方网站去找，作者已经给出了。如果实在懒得找，大家可以留言，我给你们发过去。仔细研究并编译一遍，然后一起学习，一起交流。</p>
+<p>大家可能注意到了，我这次写编程笔记时用的编译器变成了黑色的，而不是之前编译时用的Sandbox。作者非常友好，给初学者配备了Sandbox这个实用的编译工具帮助大家学习。可Sandbox有个不好的地方就是编译的代码没办法储存，于是我只好另外找个好用的编译工具。</p>
+<p>新发现的编译器叫做Visual Studio Code，可能有人听说过Visual Studio编译器，是个超级巨大和笨重的编译器。不过这款VS Code非常轻巧，占用内存小，功能还强大，大家可以百度去它的官网下载。</p>
+<p>好了，这段例子的编译和理解已经耗费了我太多的时间，我得快马加鞭赶紧往下学习了！</p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/计算机程序/">计算机程序</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/编程/" title="编程">编程</a> / 
+    
+        <a href="/tags/学习/" title="学习">学习</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2018/01/14/JavaScript学习笔记七/">
+            
+                JavaScript学习笔记七
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2018/01/14/JavaScript学习笔记五/">
+            
+                JavaScript学习笔记五
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'JavaScript学习笔记六' || '2018/01/14/JavaScript学习笔记六/',
+    owner: 'jangdelong',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/计算机程序/">计算机程序</a>
+        <span class="badge">(18)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/随想/">随想</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/英语/">英语</a>
+        <span class="badge">(5)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/能源电力/">能源电力</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/学习/">学习</a>
+        <span class="badge">(23)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/编程/" title="编程">编程 (21)</a>
+  
+    <a class="tag-item" href="/tags/学习/" title="学习">学习 (48)</a>
+  
+    <a class="tag-item" href="/tags/学术/" title="学术">学术 (1)</a>
+  
+    <a class="tag-item" href="/tags/英语/" title="英语">英语 (6)</a>
+  
+    <a class="tag-item" href="/tags/思考/" title="思考">思考 (49)</a>
+  
+    <a class="tag-item" href="/tags/能源电力/" title="能源电力">能源电力 (3)</a>
+  
+    <a class="tag-item" href="/tags/健康/" title="健康">健康 (2)</a>
+  
+    <a class="tag-item" href="/tags/知识付费/" title="知识付费">知识付费 (4)</a>
+  
+    <a class="tag-item" href="/tags/知识变现/" title="知识变现">知识变现 (2)</a>
+  
+    <a class="tag-item" href="/tags/硕士/" title="硕士">硕士 (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://www.zhihu.com/people/liu-yujia/activities" target="_blank" title="刘宇佳的知乎链接">知乎</a>
+        </li>
+    
+        <li>
+            <a href="https://www.toutiao.com/c/user/62149270769/#mid=1570471072036866" target="_blank" title="头条号链接">今日头条</a>
+        </li>
+    
+        <li>
+            <a href="https://github.com/Liu-Yujia" target="_blank" title="GitHub链接">GitHub</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2018
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>重新理解编程的一篇文章 | 刘宇佳</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="刘宇佳，工程热物理，编程，英语" >
+    <meta name="description" content="刘宇佳的网站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="刘宇佳" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">刘宇佳</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2018/01/14/重新理解编程的一篇文章/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2018/01/14/重新理解编程的一篇文章/index.html" class="item ">
+                <a href="/lab/" title="测试室" class="icon-lab">&nbsp;测试室</a>
+            </li>
+            
+            <li rel="/2018/01/14/重新理解编程的一篇文章/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2018/01/14/重新理解编程的一篇文章/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/Liu-Yujia" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="https://weibo.com/liuyujia1991" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/yujia.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>重新理解编程的一篇文章</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        刘宇佳 发表于
+        <time datetime="2018-01-14T09:18:05.000Z">2018-01-14</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<p><em>本来人人都是工程师，只不过很多人明里暗里自己放弃了而已。</em></p>
+</blockquote>
+<a id="more"></a>
+<p>虽然说处在假期中有大把的学习时间可以利用，但是我并没有学很多东西，相比平时的在工作状态中，阅读量和学习量反而小。</p>
+<p>可能这就是人的惰性，天生好吃懒做，不想劳动。一旦没有一个制约的机制约束自己，整个人的状态立马就一溃千里。</p>
+<p>不过今天在翻网页的时候读了一个篇对我来说意义重大文章，这篇文章如此有用，以至于影响我接下来半年甚至一年的休闲时间的利用。</p>
+<p>文章的题目是：《人人都是工程师》前言，李笑来老师写的，</p>
+<h4 id="自己学习编程的经历"><a href="#自己学习编程的经历" class="headerlink" title="自己学习编程的经历"></a>自己学习编程的经历</h4><p>我接触编程已经很多年了，可就是没学会过。</p>
+<p>大一的时候，我们专业开设的编程是VB语言（可能现在除了微软，几乎都没几个公司用VB语言了），当时学完之后对编程根本不理解，但是我最后要做毕业设计的时候，自己竟然用VB语言写出了一个计算器的小程序，可以用来做简单的加减乘除计算。</p>
+<p>不过随着大一编程课的结束，我的编程学习也就断了，即使后来想将VB语言言再深入学习下，发现自己根本学不进去了，骨子里觉得那东西实在是太难了。</p>
+<p>后来在研究生的时候，发现自己那些在大学时学了计算机专业的高中同学，在本科毕业之后就能拿到上万的工资，自己也就突然心动了，觉得编程这个东西可以帮自己挣钱，然后又有了学习编程的念头。</p>
+<p>当然这个时候没人指导我，自己也没有从网上搜一些可靠的学习资料之类的，更没想到去报个辅导班。然后就是按着之前大学时候学习VB的习惯，先在图书馆借了一本C语言书，然后从最基本的开始学起。但是一段时间之后我就发现我疯了，光计算机的基础知识就讲了大概半本书，而自己在刚开始的时候根本是记不住那半本书的知识。持续了大概有两个礼拜之后我就毅然决然的再次放弃了编程学习。</p>
+<h4 id="李笑来老师的编程学习论"><a href="#李笑来老师的编程学习论" class="headerlink" title="李笑来老师的编程学习论"></a>李笑来老师的编程学习论</h4><p>首先，李笑来老师给了我一个非常引人入胜的理由：程序设计也许是目前地球上最容易变现被高估可事实上却实际上并不难以获得的技能。</p>
+<p>要知道对我这样的穷光蛋来说，知道有一种东西可以立马变现，帮我挣得一点平时的生活花销钱，我肯定会去尝试的。而且我以前实在是太高估了编程的难度，以至于自己在自学的时候没看到任何成效，就放弃学习这个东西。</p>
+<p>还有另一个理由就是用英语学习编程，这样在一个陌生的领域完全放弃使用中文而使用英文，可以使自己的英文达到一个很高的水准，因为这个领域内，你对应的中文是完全陌生的，从一开始就用英文去学习，会让自己的大脑起码在这个领域内习惯使用英文，进而达到英语熟练。</p>
+<p>而且在编程领域，一个人的水准其实是取决于他的英文水平，通常在国内，一个程序员的英文水平越高，编程能力就越强。</p>
+<p>本来人人都是工程师，只不过很多人明里暗里自己放弃了而已。</p>
+<p>我就是那个放弃过好几次成为工程师机会的人，浪费了自己那些宝贵的时间不说，还因为没有成功，给自己“学不会”的心理暗示。这种自证预言在很长一段时间都制约我继续把编程学下去，幸好今天看到明眼人的文章了。</p>
+<h4 id="自己未来的编程学习论"><a href="#自己未来的编程学习论" class="headerlink" title="自己未来的编程学习论"></a>自己未来的编程学习论</h4><p>对，仅仅一百小时，在绝大多数领域里，就足矣把绝大多数人甩在身后。这是李笑来老师自身实践和阅读科学文章之后的结论。</p>
+<p>接下来，我就要以一百个小时为刻度再次开始自己的编程学习啦。这次我再也不会因为旁边人们的打击或者自己进步的缓慢而放弃编程了。考虑到我要通过看一本英文原版书来入门学习，其中查单词和理解意思还要花时间，我就以一百五十个小时为第一步的刻度开始学习。</p>
+<p>从今天起，每天抽出一个半小时的时间专门学习编程，编程的书籍是Eloquent JavaScript，大家也可以去网上看和下载.</p>
+<p>即使每天不睡觉，也要坚持把一个半小时的编程学习给折腾完，从今天5月29号开始到8月29号，到时候看看成效。期间每天记录自己的编程学习心得，花几分钟写到微信公众号里。</p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/计算机程序/">计算机程序</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/编程/" title="编程">编程</a> / 
+    
+        <a href="/tags/学习/" title="学习">学习</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2018/01/14/学会的技能真的会了吗？/">
+            
+                学会的技能真的会了吗？
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2018/01/14/经济学思维，李子旸老师作品推荐/">
+            
+                经济学思维，李子旸老师作品推荐
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '重新理解编程的一篇文章' || '2018/01/14/重新理解编程的一篇文章/',
+    owner: 'jangdelong',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/计算机程序/">计算机程序</a>
+        <span class="badge">(18)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/随想/">随想</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/英语/">英语</a>
+        <span class="badge">(5)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/能源电力/">能源电力</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/学习/">学习</a>
+        <span class="badge">(23)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/编程/" title="编程">编程 (21)</a>
+  
+    <a class="tag-item" href="/tags/学习/" title="学习">学习 (48)</a>
+  
+    <a class="tag-item" href="/tags/学术/" title="学术">学术 (1)</a>
+  
+    <a class="tag-item" href="/tags/英语/" title="英语">英语 (6)</a>
+  
+    <a class="tag-item" href="/tags/思考/" title="思考">思考 (49)</a>
+  
+    <a class="tag-item" href="/tags/能源电力/" title="能源电力">能源电力 (3)</a>
+  
+    <a class="tag-item" href="/tags/健康/" title="健康">健康 (2)</a>
+  
+    <a class="tag-item" href="/tags/知识付费/" title="知识付费">知识付费 (4)</a>
+  
+    <a class="tag-item" href="/tags/知识变现/" title="知识变现">知识变现 (2)</a>
+  
+    <a class="tag-item" href="/tags/硕士/" title="硕士">硕士 (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://www.zhihu.com/people/liu-yujia/activities" target="_blank" title="刘宇佳的知乎链接">知乎</a>
+        </li>
+    
+        <li>
+            <a href="https://www.toutiao.com/c/user/62149270769/#mid=1570471072036866" target="_blank" title="头条号链接">今日头条</a>
+        </li>
+    
+        <li>
+            <a href="https://github.com/Liu-Yujia" target="_blank" title="GitHub链接">GitHub</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2018
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

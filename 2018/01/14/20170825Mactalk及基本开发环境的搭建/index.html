@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>Mactalk及基本开发环境的搭建 | 刘宇佳</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="刘宇佳，工程热物理，编程，英语" >
+    <meta name="description" content="刘宇佳的网站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="刘宇佳" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">刘宇佳</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2018/01/14/20170825Mactalk及基本开发环境的搭建/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2018/01/14/20170825Mactalk及基本开发环境的搭建/index.html" class="item ">
+                <a href="/lab/" title="测试室" class="icon-lab">&nbsp;测试室</a>
+            </li>
+            
+            <li rel="/2018/01/14/20170825Mactalk及基本开发环境的搭建/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2018/01/14/20170825Mactalk及基本开发环境的搭建/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/Liu-Yujia" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="https://weibo.com/liuyujia1991" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/yujia.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>Mactalk及基本开发环境的搭建</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        刘宇佳 发表于
+        <time datetime="2018-01-14T11:23:05.000Z">2018-01-14</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<p><em>MacTalk及基本开发环境的搭建</em></p>
+</blockquote>
+<a id="more"></a>
+<p>在刚上大学的时候，我就从大学的同学那里知道了老罗，后来的很长时间里，一度标榜自己是个忠实罗粉。有一段时间天天听“老罗的语录”，甚至有时候上课的时候都在听。我上大学的那几年老罗还是一个做教育机构的老板，全国各地做讲座。每次在优酷网上一出来老罗的视频讲座，我必定第一时间看个痛快。没想到等我本科毕业的时候，老罗竟然开始做了手机。</p>
+<p>当然今天说的主要主题不是老罗，因为老罗跟Mac的唯一联系可能就是他用Mac做个Keynote之类的，他应该也不做开发。</p>
+<p>在老罗做手机创业的第二年还是第三年，他公司来了一位技术牛人叫池建强，最开始是在老罗的发布会上听过他的名字，后来在网上偶尔搜了一下他的名字之后发现，他竟然在写博客，而且有自己的独立网站，而且网站中有大量的个人文章。</p>
+<p>那是我第一次对程序员整体有了一个极大的改观，认识上的改观。原来，程序员并不都是大家印象中，那些呆板的只会敲计算机代码的动物，他们也是有血有肉的人，他们也有很多要表达的东西，他们中的一些人也有可能有很强的文字功底和文字表述能力。</p>
+<p>后来我又一次在准备开始学习编程，在网上看到了很多会写作的程序员：学过两次编程，最终成为技术牛人的阮一峰；天才少年张砷镓；清华计算机硕士saclers，技术出身，却以写文章和学英语行走江湖；当然还有超级大牛人李笑来，销售出身，以前还是个英语老师，也是边路出家成为计算机编程牛人，李笑来老师也是促使我第三次学习编程的最重要的一个人。</p>
+<p>我之前也提过，在读研一的时候，我又开始学过一次编程，在那次学编程的时间里翻了很多次池建强的博客‘MacTalk—池建强的随想录’，看了很多他的博文。但是无奈那时候，身无分文，又没能力赚取额外收入，只能用自己破烂的笔记本和实验组发的Windows电脑来学习编程。最后也没学会，不过学习不成功的原因当然不是计算机的问题，是自己的问题。</p>
+<p>前段时间网上搞促销的时候，我从已经下狠心终于买了第一台的Macbook Air电脑，当然还不得已分期签了电商一屁股债(上学期间天真地以为工作后对会喜欢的物品有购买能力，后来才发现工作后只是对债务有了偿还能力，太惨了！)。</p>
+<p>刚开始用Mac的时候感觉非常不适应，因为从小到大都是在Windows系统中操作文档、下载软件、做计算和玩游戏的。一下转到Mac系统中，简直是非常难受。刚开始那几天，我都是一边开着电脑，一边放着手机，在Mac中遇到不懂的操作，就只好用手机搜一下Mac的操作流程教程。就这样一点一滴，用了差不多一个礼拜后，感觉Mac电脑真的是非常的便捷。</p>
+<p>1.有了Mac电脑之后感觉在没有外界屏幕的情况下，再也不需要用鼠标了。Mac笔记本提供了非常多样化功能的触控板，相对于Windows电脑的鼠标功能，Mac电脑的触控功能，简直比鼠标还要灵活，用了两天之后就再也离不开了。至于说触控板怎么用，大家去Google，Google上不了的去Bing，还记得那句话吗：能问搜索引擎的就别问别人。</p>
+<p>2.Mac电脑的系统是封闭式的电脑系统，相比windows电脑有一个好处就是不用再分磁盘了，而且安装东西的时候也没必要，可以装到某个盘里。对于文件操作来说，这是一个非常便利的系统，可以省好多精力整理磁盘。<br>另外由于系统是封闭的，所以有个额外的好处，就是Mac电脑可以提供非常多的快捷操作，不管是编程还是办公，可以节省相当多的时间。</p>
+<p>3.Mac电脑的屏幕可是真好，同样是1980*1080分辨率的电脑，Mac电脑的屏幕就是柔和，技术流的人可能懂其中的内在原因是什么，反正我是觉得眼睛可以少受点伤害了。</p>
+<p>…Mac电脑可能还有更多的好处等着我去发掘</p>
+<p>接下来再说说基本开发环境的搭建，前面我也提到过了，我再次开始学编程，是受李笑来老师的文章影响，决心再开始学编程，然后把编程学会。李笑来老师在自己的一个网站上公布了一个非常实用的编程教程书，在买Mac电脑之前，我已经通过该教程的指引去学习英文版的JavaScript了。大家也没事儿可以去王章翻翻这个网页lixiaolai.com。</p>
+<p>这两天买了笔记本之后，我就开始一步一步跟着李笑来老师的教程开始鼓捣了。不做不知道，一做吓一跳，李笑来老师的那个看似非常简短的教程，区区十几篇文章，其中蕴含了大量的知识及操作，需要花大量的时间学习。</p>
+<p>其中教程的第五篇文章讲的就是基本环境的搭建，由于自己之前就从来没涉及到那些操作和软件，再加上自己对Mac OS系统的不熟悉，搭建那个文章中所需要的开发环境，真是花费了我相当多的时间，都快要崩溃了。不过还好，绕了很多弯路，把真实的开发环境搭出来之后，总会有很多的兴奋感和成就感。</p>
+<p>当然更全面的开发环境Atom我刚刚装上，还在读它的操作手册，以便进行下一步的操作。</p>
+<p>搭建开发环境应该是开始学习编程的关键一步，如果你在学习编程，试一下李笑来老师的开发环境教程，有不会的或者有新的心得，咱们私下讨论！</p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/计算机程序/">计算机程序</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/编程/" title="编程">编程</a> / 
+    
+        <a href="/tags/学习/" title="学习">学习</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2018/01/14/20170826运动带来的蝴蝶效应感受过吗/">
+            
+                运动带来的蝴蝶效应感受过吗
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2018/01/14/20170822HTML学习笔记/">
+            
+                跟着英文教程快速学HTML
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '20170825Mactalk及基本开发环境的搭建' || '2018/01/14/20170825Mactalk及基本开发环境的搭建/',
+    owner: 'jangdelong',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/计算机程序/">计算机程序</a>
+        <span class="badge">(18)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/随想/">随想</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/英语/">英语</a>
+        <span class="badge">(5)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/能源电力/">能源电力</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/学习/">学习</a>
+        <span class="badge">(23)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/编程/" title="编程">编程 (21)</a>
+  
+    <a class="tag-item" href="/tags/学习/" title="学习">学习 (48)</a>
+  
+    <a class="tag-item" href="/tags/学术/" title="学术">学术 (1)</a>
+  
+    <a class="tag-item" href="/tags/英语/" title="英语">英语 (6)</a>
+  
+    <a class="tag-item" href="/tags/思考/" title="思考">思考 (49)</a>
+  
+    <a class="tag-item" href="/tags/能源电力/" title="能源电力">能源电力 (3)</a>
+  
+    <a class="tag-item" href="/tags/健康/" title="健康">健康 (2)</a>
+  
+    <a class="tag-item" href="/tags/知识付费/" title="知识付费">知识付费 (4)</a>
+  
+    <a class="tag-item" href="/tags/知识变现/" title="知识变现">知识变现 (2)</a>
+  
+    <a class="tag-item" href="/tags/硕士/" title="硕士">硕士 (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://www.zhihu.com/people/liu-yujia/activities" target="_blank" title="刘宇佳的知乎链接">知乎</a>
+        </li>
+    
+        <li>
+            <a href="https://www.toutiao.com/c/user/62149270769/#mid=1570471072036866" target="_blank" title="头条号链接">今日头条</a>
+        </li>
+    
+        <li>
+            <a href="https://github.com/Liu-Yujia" target="_blank" title="GitHub链接">GitHub</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2018
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>
