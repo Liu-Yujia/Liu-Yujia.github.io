@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>NodeJS初探索 | 刘宇佳</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="刘宇佳，工程热物理，编程，英语" >
+    <meta name="description" content="刘宇佳的网站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="刘宇佳" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">刘宇佳</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2018/01/26/20180126-计算机程序-NodeJS初探索/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2018/01/26/20180126-计算机程序-NodeJS初探索/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2018/01/26/20180126-计算机程序-NodeJS初探索/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/Liu-Yujia" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="https://weibo.com/liuyujia1991" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/yujia.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>NodeJS初探索</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        刘宇佳 发表于
+        <time datetime="2018-01-26T11:58:08.000Z">2018-01-26</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<p><em>Node.JS的出现确实是前端“程序猿”们的春天，曾经的前端工程师一下变全栈工程师了，但这也对工程师们的要求更高了。</em></p>
+</blockquote>
+<a id="more"></a>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fntc1u2o7fj30kr0bw74h.jpg" alt=""></p>
+<p>好久没更新技术贴了，确实也是因为最近一段时间没把心思用在这上面，也没学习更多的东西。之前学习的时候有一段时间的停滞期，导致现在都快忘了当初都学了啥东西，再捡起来还要费很大的劲儿。</p>
+<p><strong>当然这也是人懒的一个标志，因为任务艰巨所以干脆选择放弃</strong>。以前我就是这样反反复复主动放弃了两次学会编程的机会，到现在又遇到同样的问题，可不能再主动清零自己花在编程上的时间了。</p>
+<p>相比于HTML和CSS来说，JavaScript确实要更难一些，前两者涉及到的只是一些语法规则，我当时学JavaScript途中为了缓解一下，用很少的时间就学明白了，之前还专门写过关于学习<a href="https://mp.weixin.qq.com/s?__biz=MzIxNzQ5NzMxMA==&amp;mid=2247484135&amp;idx=1&amp;sn=67d04533c6a8cd8f5886f99c74a99015&amp;chksm=97f9a956a08e2040d146a6daea17cf807d0ec80b4d39c482b44e74efb9efe62807c9fdca61d0#rd" target="_blank" rel="noopener">HTML</a>和<a href="https://mp.weixin.qq.com/s?__biz=MzIxNzQ5NzMxMA==&amp;mid=2247484187&amp;idx=1&amp;sn=444ca88dad0058ccebc8bf23099ce20e&amp;chksm=97f9a8aaa08e21bc6e723e86947ce44e05686b938f938ee7620aa29cfebf2ea837e8bef33160#rd" target="_blank" rel="noopener">CSS</a>的文章。而且隔一段时间之后看一下就能想起来，无非就是手生干活儿慢。</p>
+<p>可JavaScript的难度就上了一个级别的了，不仅要熟悉其本身的语法规则，其中的各种函数调用以及程序模块的构建真是能把人真晕。而且跟着教程学习半天之后去做每章节后面的习题，会发现很多题连思路都没有更别提把程序编出来了。对于新手来说，有些简单的习题即使会做，也要经过多次编译才能得到正确的结果，<strong>因为编程是个精细活儿，可能某个标点的错误都会影响整个程序的执行。</strong></p>
+<p>当初上手JavaScript时候，只是学了些很浅的通用的编程知识，也没做更深入的习题，浅尝辄止。这两天再次复习JavaScript时，越来越觉得JavaScript是个比较难的编程语言，类型多函数多还得搭配着HTML和CSS使用，总之学得很吃力。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fnu8qgksadj30bo04omxl.jpg" alt=""></p>
+<p>我在看书吃力的时候就喜欢跳着章节或者换本书看，之前在学JavaScript时有一阵特别烦躁，于是就把JavaScript甩到了一边去学HTML和CSS了，结果看得还挺快，学完之后又回过头学JavaScript时效果很好。</p>
+<p>最近几天是复习JavaScript复习烦了，于是跳到最后的Node.js章节翻着看了起来。换个内容后自己也没太大压力，反而能看到很多全面的东西：</p>
+<h2 id="node-js与JavaScript异同"><a href="#node-js与JavaScript异同" class="headerlink" title="node.js与JavaScript异同"></a>node.js与JavaScript异同</h2><p>在学习JavaScript过程中，一直编译器中编译程序，程序作用在浏览器中改变页面的显示效果；而node.js则是作用在服务器上的，也就是通常所说的后端，可以针对不同的作用对象编写不同的程序，比如OS,WEB,DATABASE等等，用到的都是node中各个不同的模块。</p>
+<p>不过令人惊喜的是，node.js和JavaScript都是基于ECMAScript脚本语言实现的，所以JavaScript的规则在node.js中都能用。这也是为什么JavaScript语言在最近几年在编程语言中的地位大幅增加的原因，前端后端都能用。</p>
+<p>唯一不一样的可能就是Window全局变量，在JavaScript中Window变量是可以用来访问所有函数和变量的，因为作用范围就是所编译的窗口；而node.js中的每个文件都是一个独立的模块，想要用一个全局变量来访问各模块中的函数显然不太可能。</p>
+<p>不过好像在JavaScript中也很少用到全局变量，出错的可能性太大。</p>
+<h2 id="node的模块可真多"><a href="#node的模块可真多" class="headerlink" title="node的模块可真多"></a>node的模块可真多</h2><p>为了node.js可以编写各种各样的服务器应用，其提供了各种各样的应用模块。node.js提供了各种API（Application Programming Interface,应用程序编程接口）供开发者使用，这些使用的规则在官网上都有介绍。</p>
+<p>我上API的文档网站中翻着看了看，我天，每个API的目录下都有很多的应用文件。这也是node.js全面性的体现，虽然我没用过，也不清楚具体的使用规则，但是感觉这么多的应用足够能满足开发者们的各种需求了。</p>
+<p>安装node.js后调用它很容易，在控制台侧输入node就可以了，然后运行用node运行一段有效的.JS文件，就可以得到该文件的结果。</p>
+<p>node中用require命令应该是最多的，用来调用各种模块以及文件之间的调用都得用require语句实现，不过涉及到这么多的调用，在使用过程中应该会有很多的规则。</p>
+<h2 id="再拿个人博客当练手"><a href="#再拿个人博客当练手" class="headerlink" title="再拿个人博客当练手"></a>再拿个人博客当练手</h2><p>自从有了GitHub和Hexo之后，程序员们在建立自己的博客网站时都喜欢用hexo建，因为确实是方便好用。计算机老手们用这套工具的话，可能不到一个小时就能搭建出来一个简易的个人博客。</p>
+<p>不过真正要搭建一个商用的、流量较大网站时，还是得用前端和后端编写代码来实现。尤其是用node.js在服务器上编程，不仅要在服务器上部署好网站的框架，还要涉及到很多客户端、路径、路由等等通信知识。</p>
+<p>稍微有点编程尝试的人就能想象到这个过程工作量很大，不过这个过程应该也会是一个非常好的练手机会，等再修炼一段时间后就用它来练手编程。</p>
+<p>Node.js我还只是粗略地看了看，学了学，不过稍微看了一下就能感受到其功能的强大，以后还要耐心学其中涉及到的各种工具和知识。</p>
+<p>Node.js的出现确实是前端“程序猿”们的春天，曾经的前端工程师一下变全栈工程师了，但这也对工程师们的要求更高了。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fnu8ra7g0aj30g20ir45y.jpg" alt=""></p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/计算机程序/">计算机程序</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/编程/" title="编程">编程</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="javascript: void(0);">没有上一篇了</a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2018/01/25/20180125“神在细节间”/">
+            
+                “神”在细节间
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/随想/">随想</a>
+        <span class="badge">(37)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/计算机程序/">计算机程序</a>
+        <span class="badge">(26)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/英语/">英语</a>
+        <span class="badge">(8)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/能源电力/">能源电力</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/学习/">学习</a>
+        <span class="badge">(26)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/学习/" title="学习">学习 (57)</a>
+  
+    <a class="tag-item" href="/tags/学术/" title="学术">学术 (1)</a>
+  
+    <a class="tag-item" href="/tags/编程/" title="编程">编程 (29)</a>
+  
+    <a class="tag-item" href="/tags/英语/" title="英语">英语 (9)</a>
+  
+    <a class="tag-item" href="/tags/思考/" title="思考">思考 (56)</a>
+  
+    <a class="tag-item" href="/tags/能源电力/" title="能源电力">能源电力 (5)</a>
+  
+    <a class="tag-item" href="/tags/健康/" title="健康">健康 (3)</a>
+  
+    <a class="tag-item" href="/tags/The-Economist/" title="The Economist">The Economist (3)</a>
+  
+    <a class="tag-item" href="/tags/经济学/" title="经济学">经济学 (1)</a>
+  
+    <a class="tag-item" href="/tags/硕士/" title="硕士">硕士 (3)</a>
+  
+    <a class="tag-item" href="/tags/知识付费/" title="知识付费">知识付费 (4)</a>
+  
+    <a class="tag-item" href="/tags/知识变现/" title="知识变现">知识变现 (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 其他链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>其他链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://www.zhihu.com/people/liu-yujia/activities" target="_blank" title="刘宇佳的知乎链接">知乎</a>
+        </li>
+    
+        <li>
+            <a href="https://www.toutiao.com/c/user/62149270769/#mid=1570471072036866" target="_blank" title="头条号链接">今日头条</a>
+        </li>
+    
+        <li>
+            <a href="https://github.com/Liu-Yujia" target="_blank" title="GitHub链接">GitHub</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2018
+    
+
+    <a> liuyujia.com.cn</a> | All Rights Reserved | 
+    <a> 京ICP备:18002610</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>
