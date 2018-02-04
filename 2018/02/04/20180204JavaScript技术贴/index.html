@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>JavaScript浏览器对象模型的使用 | 刘宇佳</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="刘宇佳，工程热物理，编程，英语" >
+    <meta name="description" content="刘宇佳的网站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="刘宇佳" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">刘宇佳</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2018/02/04/20180204JavaScript技术贴/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2018/02/04/20180204JavaScript技术贴/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2018/02/04/20180204JavaScript技术贴/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/Liu-Yujia" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="https://weibo.com/liuyujia1991" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/yujia.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>JavaScript浏览器对象模型的使用</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        刘宇佳 发表于
+        <time datetime="2018-02-04T06:30:33.000Z">2018-02-04</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<p><em>BOM中常用的对象就那么三四个，而且每个对象中常用到的函数也就那么三四个，所以非常好学。最常用的Windows对象会了，那其他的自然也会用了。</em></p>
+</blockquote>
+<a id="more"></a>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fo4iojj79rj30wv0in3zm.jpg" alt=""></p>
+<p>由于工作中和平时在家用的电脑不是一样的系统，所以每次从单位回家或者每次放完周六日再回单位，总会有一个痛苦的切换过程。最典型不适应的就是Mac中的command的键和Windows中的control键，每天几乎都会在不同的电脑上将这两个键按错很多次，搞得我快有点分裂了。</p>
+<p>不知道工资什么时候才能涨到随意换电脑的水平，然后到时候我就任性把公司那台老旧的、性能奇差的Windows电脑换成Mac。这应该能成为我接下来一两年的一个奋斗小目标了。</p>
+<p>正好又到了周末的时间，抽空学了一阵计算机技术之后又可以愉快地更新技术贴了。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fo4il5sik9j30t60b475p.jpg" alt=""></p>
+<p>众所周知JavaScript语言是作用于浏览器的，作用于浏览器的各种操作就要用到浏览器对象模型BOM（Browser Object Model），BOM提供了访问浏览器的接口。这些功能大多和网页内容无关。</p>
+<p>多年来BOM中是没有统一规范的，所以各大浏览器在BOM上都有专属于自己的定制，对于开发者来说，这是件很痛苦的事情，因为同样的功能在不同的浏览器上可能无法实现。不过现在好了，HTML5终于将BOM的主要方面纳入规范，实在是可喜可贺，<strong>行业内标准化规范的制定不仅是造福从业者，简直就是造福全人类的事情。</strong></p>
+<p><strong>BOM中常用的对象就那么三四个，而且每个对象中常用到的函数也就那么三四个，所以非常好学。最常用的Windows对象会了，那其他的自然也会用了。</strong></p>
+<p><strong>Windows对象是最常用的BOM对象，也是相对来说最难使用的对象</strong>。以Windows对象中的设置定时器setInterval()为例来展开BOM的用法，首先要在脚本文件<script></script>中设定一个函数来获取时间参数，然后再定义一个setInterval函数来调用获取的时间值。</p>
+<p>紧接着在<body></body>中要将上面设定的函数调用起来，以便在网页中得到相应的显示效果。配置语句为：<input type="button" value="confirm" onclick="testconfirm()">，具体的配置如下图的显示：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fo4kd3tgzaj30vn0hcae6.jpg" alt=""></p>
+<p>按照这样的方式去设置BOM中的对象，都能得到相应的效果，Windows对象中还有open()，alert()，confirm()，prompt()，moveto(),等等，你可以在网上轻松地找到其用法，或者你不看用法，配置一下就知道效果如何了。</p>
+<p><strong>另外一个常用的对象是history对象</strong>，这个对象主要是用在浏览器中，用于返回上一页或者前进到历史页。主要有back(),forward(),go(intValue)这三个应用，前两个顾名思义很好理解，第三个应用中go可以是整数的话就是前进页面，是负数的话就是后退页面，其实前两个都可以用第三个应用替代。</p>
+<p>具体配置时就是把页面中的标签直接指向前进的文件或后退的文件中就行。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fo4kr7wmkmj30og0a076e.jpg" alt=""></p>
+<p>另外两个BOM对象更为简单，也不怎么常用，因此就不再多赘述。</p>
+<p>喔，对了，大家如果对计算机编程感兴趣的，欢迎去<a href="https://github.com/Liu-Yujia" target="_blank" rel="noopener">我的GitHub</a>去浏览相应的代码，每个文件中都有相应的说明。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fo3oyq03bej30g20ir45y.jpg" alt=""></p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/计算机程序/">计算机程序</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/编程/" title="编程">编程</a> / 
+    
+        <a href="/tags/Mac/" title="Mac">Mac</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="javascript: void(0);">没有上一篇了</a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2018/02/03/20180203《格局逆袭》读书笔记2/">
+            
+                20180203《格局逆袭》读书笔记2
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/随想/">随想</a>
+        <span class="badge">(38)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/计算机程序/">计算机程序</a>
+        <span class="badge">(28)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/英语/">英语</a>
+        <span class="badge">(9)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/能源电力/">能源电力</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/学习/">学习</a>
+        <span class="badge">(30)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/学习/" title="学习">学习 (58)</a>
+  
+    <a class="tag-item" href="/tags/学术/" title="学术">学术 (1)</a>
+  
+    <a class="tag-item" href="/tags/编程/" title="编程">编程 (31)</a>
+  
+    <a class="tag-item" href="/tags/英语/" title="英语">英语 (10)</a>
+  
+    <a class="tag-item" href="/tags/思考/" title="思考">思考 (61)</a>
+  
+    <a class="tag-item" href="/tags/能源电力/" title="能源电力">能源电力 (5)</a>
+  
+    <a class="tag-item" href="/tags/健康/" title="健康">健康 (3)</a>
+  
+    <a class="tag-item" href="/tags/The-Economist/" title="The Economist">The Economist (4)</a>
+  
+    <a class="tag-item" href="/tags/经济学/" title="经济学">经济学 (1)</a>
+  
+    <a class="tag-item" href="/tags/硕士/" title="硕士">硕士 (4)</a>
+  
+    <a class="tag-item" href="/tags/Mac/" title="Mac">Mac (1)</a>
+  
+    <a class="tag-item" href="/tags/知识付费/" title="知识付费">知识付费 (4)</a>
+  
+    <a class="tag-item" href="/tags/知识变现/" title="知识变现">知识变现 (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 其他链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>其他链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://www.zhihu.com/people/liu-yujia/activities" target="_blank" title="刘宇佳的知乎链接">知乎</a>
+        </li>
+    
+        <li>
+            <a href="https://www.toutiao.com/c/user/62149270769/#mid=1570471072036866" target="_blank" title="头条号链接">今日头条</a>
+        </li>
+    
+        <li>
+            <a href="https://github.com/Liu-Yujia" target="_blank" title="GitHub链接">GitHub</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2018
+    
+
+    <a> liuyujia.com.cn</a> | All Rights Reserved | 
+    <a> 京ICP备:18002610</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>
