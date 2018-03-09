@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>快速精通JavaScript中的Module应用 | 刘宇佳</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="刘宇佳，工程热物理，编程，英语" >
+    <meta name="description" content="刘宇佳的网站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="刘宇佳" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">刘宇佳</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2018/03/07/20180307快速精通JavaScript中的Module应用/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2018/03/07/20180307快速精通JavaScript中的Module应用/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2018/03/07/20180307快速精通JavaScript中的Module应用/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/Liu-Yujia" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="https://weibo.com/liuyujia1991" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/yujia.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>快速精通JavaScript中的Module应用</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        刘宇佳 发表于
+        <time datetime="2018-03-06T18:18:48.000Z">2018-03-07</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<p><em>这种模块化的程序设计方案给程序设计提供了一个极大的好处：你可以反复利用自己编写好的代码。</em></p>
+</blockquote>
+<a id="more"></a>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fp3h6a8xs9j30le0bsjta.jpg" alt=""></p>
+<p>很多时候我们看的书都会分章节，这样不仅作者在写作的时候有条理，读者在读书的时候也能清晰读懂作者的逻辑结构。同样在程序编写领域，也有类似的程序编写风格，一般称之为“Literate Programming”。</p>
+<p>在实际编写程序的过程中，一般都用不着这样的编写风格，但是这种模块化的程序设计方案确给程序设计提供了一个极大的好处：<strong>你可以反复利用自己编写好的代码</strong>。一般资深的程序员都会将不同功能的模块放到各种各样的文件中，当用到的时候他们就直接将模块粘到他们现有的程序中，修改再使用。<strong>JavaScript有天然的模块化优势，于是慢慢的演化出了在线的模块库——NPM。</strong></p>
+<p>在JavaScript编程过程中，一个号的模块库就是给编写者提供了一个好的接口，能极大地提高开发者的效率。那到底如何在JavaScript中创造模块呢？</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fp3h7aa005j30jc0awjrn.jpg" alt=""></p>
+<p>在JavaScript中函数是唯一创建域的方式，创建模块也必须基于函数来创建。常规的函数操作中，先定义一个变量，然后定义函数对变量操作；而模块的操作则是将函数直接作为一个对象赋值给一个变量，进而使用时直接调用变量就可以完成函数的所有操作。</p>
+<p>以星期天的输出为例，模块化的操作直接将函数赋值给DayName变量，返回值也放在了变量中，非常方便其他函数的调用。具体实现方式如下：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fp3k2g1ikaj30jc0h3wh1.jpg" alt=""><br>    想要获得完整的代码，请到我的<a href="https://github.com/Liu-Yujia" target="_blank" rel="noopener">GitHub</a>中自行下载</p>
+<p>利用相似的原理，可以将代码完全跟程序中的代码隔离开，单独对数值、字符等元素操作而不指向任何函数，比如下面的平方操作：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fp3k7xnsz7j30gb08omyl.jpg" alt=""></p>
+<p>在实际的编写网页中，上述的代码可以用来制定网页的宽度和高度，非常实用。而且这样操作起来可以避免函数内的局部变量和程序中的全局变量发生冲突。</p>
+<p>当模块中需要多个函数时，仍然需要在模块内部添加函数。但是简单地对函数堆砌会让程序出错可能性增大，而且一旦出错找出错误的困难也增加。模块中更好的解决办法是将各个函数再次声明一成一个个的对象接入到内部函数中。涉及到的例子和原理，以后再慢慢讨论。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fp2cux01xmj30g20ir45y.jpg" alt=""></p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/计算机程序/">计算机程序</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/编程/" title="编程">编程</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2018/03/08/20180309阅读训练营第二次碰面前总结/">
+            
+                阅读训练营阶段性总结
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2018/03/06/20180306别人三天就自学一门编程语言了，你还在看视频磨洋工么/">
+            
+                别人三天就自学一门编程语言了，你还在看视频磨洋工
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/随想/">随想</a>
+        <span class="badge">(43)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/计算机程序/">计算机程序</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/英语/">英语</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/能源电力/">能源电力</a>
+        <span class="badge">(5)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/学习/">学习</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/学习/" title="学习">学习 (60)</a>
+  
+    <a class="tag-item" href="/tags/学术/" title="学术">学术 (1)</a>
+  
+    <a class="tag-item" href="/tags/编程/" title="编程">编程 (35)</a>
+  
+    <a class="tag-item" href="/tags/英语/" title="英语">英语 (14)</a>
+  
+    <a class="tag-item" href="/tags/思考/" title="思考">思考 (66)</a>
+  
+    <a class="tag-item" href="/tags/能源电力/" title="能源电力">能源电力 (6)</a>
+  
+    <a class="tag-item" href="/tags/健康/" title="健康">健康 (3)</a>
+  
+    <a class="tag-item" href="/tags/The-Economist/" title="The Economist">The Economist (8)</a>
+  
+    <a class="tag-item" href="/tags/经济学/" title="经济学">经济学 (1)</a>
+  
+    <a class="tag-item" href="/tags/硕士/" title="硕士">硕士 (4)</a>
+  
+    <a class="tag-item" href="/tags/Mac/" title="Mac">Mac (1)</a>
+  
+    <a class="tag-item" href="/tags/热物理/" title="热物理">热物理 (1)</a>
+  
+    <a class="tag-item" href="/tags/电影/" title="电影">电影 (1)</a>
+  
+    <a class="tag-item" href="/tags/读书/" title="读书">读书 (1)</a>
+  
+    <a class="tag-item" href="/tags/知识付费/" title="知识付费">知识付费 (4)</a>
+  
+    <a class="tag-item" href="/tags/知识变现/" title="知识变现">知识变现 (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 其他链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>其他链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://www.zhihu.com/people/liu-yujia/activities" target="_blank" title="刘宇佳的知乎链接">知乎</a>
+        </li>
+    
+        <li>
+            <a href="https://www.toutiao.com/c/user/62149270769/#mid=1570471072036866" target="_blank" title="头条号链接">今日头条</a>
+        </li>
+    
+        <li>
+            <a href="https://github.com/Liu-Yujia" target="_blank" title="GitHub链接">GitHub</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2018
+    
+
+    <a> liuyujia.com.cn</a> | All Rights Reserved | 
+    <a> 京ICP备:18002610</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>
